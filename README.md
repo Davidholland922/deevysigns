@@ -85,7 +85,7 @@ lib/
 - **Testimonials** — `TESTIMONIALS` are sample reviews. Replace with genuine
   client quotes.
 - **Stats** — 20+ years / 1000+ projects / 32 counties: confirm the figures.
-- **Domain** — `SITE_URL` is `https://www.deevysigns.ie` in `app/layout.tsx`,
+- **Domain** — `SITE_URL` is `https://www.deevysigns.com` in `app/layout.tsx`,
   `app/robots.ts` and `app/sitemap.ts`. Update if different.
 - **Contact form** — the form shows a success state but is front-end only.
   Wire `handleSubmit` in `components/sections/Contact.tsx` to a real endpoint
