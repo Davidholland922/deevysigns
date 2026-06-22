@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
-import { FAQS, SERVICE_AREAS, SERVICES } from "@/lib/data";
+import { FAQS, SERVICE_AREAS, SERVICES, SOCIAL } from "@/lib/data";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -102,6 +102,7 @@ const jsonLd = {
         `${SITE_URL}/signs/sign-1.jpg`,
       ],
       logo: `${SITE_URL}/logo.jpg`,
+      sameAs: [SOCIAL.facebook],
       priceRange: "€€",
       currenciesAccepted: "EUR",
       paymentAccepted: "Cash, Card, Bank Transfer",

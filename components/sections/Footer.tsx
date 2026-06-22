@@ -1,7 +1,7 @@
-import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight, Facebook } from "lucide-react";
 import { LogoMark } from "@/components/ui/Logo";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppButton";
-import { NAV_LINKS, SERVICES, CONTACT } from "@/lib/data";
+import { NAV_LINKS, SERVICES, CONTACT, SOCIAL } from "@/lib/data";
 
 export function Footer() {
   const year = 2026;
@@ -28,6 +28,15 @@ export function Footer() {
                 </span>
               ))}
             </div>
+            <a
+              href={SOCIAL.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Deevy Signs on Facebook"
+              className="mt-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-crimson hover:bg-crimson hover:text-white"
+            >
+              <Facebook className="h-5 w-5" />
+            </a>
           </div>
 
           {/* Nav */}

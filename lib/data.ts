@@ -28,6 +28,10 @@ export const CONTACT = {
   hours: "Mon–Sat · 8am – 6pm",
 };
 
+export const SOCIAL = {
+  facebook: "https://www.facebook.com/p/Brendan-Deevy-Signs-100063773251375/",
+};
+
 export type Service = {
   icon: LucideIcon;
   title: string;
