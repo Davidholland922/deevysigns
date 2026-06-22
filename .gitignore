@@ -1,0 +1,14 @@
+/node_modules
+/.next
+/out
+/build
+.DS_Store
+*.pem
+npm-debug.log*
+.env*.local
+next-env.d.ts
+.vercel
+/.turbo
+
+# Claude Code local-only settings (machine-specific permissions)
+.claude/settings.local.json

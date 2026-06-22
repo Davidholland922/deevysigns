@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --crimson: #c2182b;
+    --charcoal: #121212;
+  }
+
+  * {
+    @apply border-warmgrey/60;
+  }
+
+  html {
+    /* non-static so Framer Motion's scroll container measures cleanly */
+    position: relative;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-charcoal-900 font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-crimson text-white;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-charcoal-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-crimson-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-crimson;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply px-6 md:px-10 lg:px-16;
+  }
+
+  /* Massive display headings */
+  .display {
+    @apply font-black tracking-tightest leading-[0.92];
+  }
+
+  /* Glass panel */
+  .glass {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .glass-dark {
+    background: rgba(18, 18, 18, 0.55);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Crimson text gradient */
+  .text-gradient-crimson {
+    @apply bg-crimson-gradient bg-clip-text text-transparent;
+  }
+
+  /* Thin outline / stroked text */
+  .text-outline {
+    -webkit-text-stroke: 1.5px rgba(18, 18, 18, 0.18);
+    color: transparent;
+  }
+  .text-outline-light {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.16);
+    color: transparent;
+  }
+}
+
+@layer utilities {
+  /* Faceted angular clip paths inspired by the logo geometry */
+  .clip-facet {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 92% 100%, 0 100%);
+  }
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+  }
+  .clip-blade {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+  }
+
+  .perspective {
+    perspective: 1200px;
+  }
+
+  /* subtle dotted facet grid */
+  .bg-grid {
+    background-image: radial-gradient(
+      rgba(18, 18, 18, 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+  }
+  .bg-grid-dark {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+}
