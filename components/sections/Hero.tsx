@@ -8,10 +8,10 @@ import { MagneticButton } from "@/components/ui/MagneticButton";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const MONTAGE = [
-  "/wraps/wrap-1.jpg", // DPD van wrap
-  "/signs/sign-2.jpg", // Tadhg Óg's shopfront
-  "/signs/sign-1.jpg", // Fort Financial shopfront
-  "/wraps/wrap-13.jpg", // Plan B van wrap
+  { src: "/wraps/wrap-1.jpg", alt: "DPD courier van wrap by Deevy Signs, Portlaoise" },
+  { src: "/signs/sign-2.jpg", alt: "Tadhg Óg's pub shop front signage in Portlaoise by Deevy Signs" },
+  { src: "/signs/sign-1.jpg", alt: "Fort Financial built-up shop front lettering by Deevy Signs, Co. Laois" },
+  { src: "/wraps/wrap-13.jpg", alt: "Plan B vehicle graphics and van wrap by Deevy Signs, Ireland" },
 ];
 
 export function Hero() {
@@ -141,9 +141,9 @@ export function Hero() {
           className="relative hidden lg:col-span-5 lg:block"
         >
           <div className="grid grid-cols-2 gap-4">
-            {MONTAGE.map((src, i) => (
+            {MONTAGE.map((item, i) => (
               <motion.div
-                key={src}
+                key={item.src}
                 initial={{ opacity: 0, scale: 0.9, y: 40 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 1, ease, delay: 0.6 + i * 0.12 }}
@@ -155,8 +155,8 @@ export function Hero() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={src}
-                  alt="Deevy Signs project"
+                  src={item.src}
+                  alt={item.alt}
                   loading="eager"
                   className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                 />

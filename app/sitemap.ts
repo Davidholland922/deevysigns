@@ -4,10 +4,14 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.deevysigns.com";
-  return ["", "#services", "#projects", "#about", "#contact"].map((path) => ({
-    url: `${base}/${path}`,
-    lastModified: new Date("2026-06-22"),
-    changeFrequency: "monthly",
-    priority: path === "" ? 1 : 0.8,
-  }));
+  // Single-page site — only the canonical homepage is a real, indexable URL.
+  // (In-page anchors like #services are sections, not separate pages.)
+  return [
+    {
+      url: `${base}/`,
+      lastModified: new Date("2026-06-22"),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+  ];
 }

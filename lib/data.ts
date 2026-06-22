@@ -307,3 +307,47 @@ export const MARQUEE_WORDS = [
   "Exhibition Stands",
   "Brand Identity",
 ];
+
+/** Towns & counties served — used for local SEO copy and schema. */
+export const SERVICE_AREAS = [
+  "Portlaoise",
+  "Mountmellick",
+  "Portarlington",
+  "Abbeyleix",
+  "Mountrath",
+  "Tullamore",
+  "Carlow",
+  "Kilkenny",
+  "Athlone",
+  "Naas",
+  "Kildare",
+  "Laois & the Midlands",
+];
+
+/** Frequently asked questions — drives content depth and FAQ rich results. */
+export const FAQS = [
+  {
+    q: "What areas do you cover?",
+    a: "We're based in Portlaoise, Co. Laois and work right across Laois and the Midlands — including Mountmellick, Portarlington, Tullamore, Carlow, Kilkenny, Athlone, Naas and Kildare — as well as nationwide installations anywhere in Ireland.",
+  },
+  {
+    q: "How much does a van wrap or vehicle graphics cost?",
+    a: "It depends on the vehicle size and whether you want a full wrap, partial wrap or cut-vinyl graphics. Most commercial vehicles fall within a clear, fixed price band — send us your vehicle details for a no-obligation quote, usually back within one working day.",
+  },
+  {
+    q: "Do you design the artwork as well as make and fit the signs?",
+    a: "Yes. We're a full-service studio — we design, manufacture and install everything in-house. That means one team owns the whole job, from the first concept and photorealistic visuals through to a clean, professional fit.",
+  },
+  {
+    q: "What types of signage do you make?",
+    a: "Vehicle graphics and van wraps, illuminated and built-up shop front signage, window graphics and manifestation, commercial and wayfinding signage, banners, exhibition displays, plus full branding and rebranding rollouts.",
+  },
+  {
+    q: "How long does a typical signage or wrap project take?",
+    a: "Most vehicle wraps are turned around in a few days once artwork is approved, and shop fronts typically within one to two weeks depending on materials and lead times. We'll confirm an exact timeline with your quote.",
+  },
+  {
+    q: "Can you rebrand an existing fleet or shopfront?",
+    a: "Absolutely. We remove old graphics, prep the surface and apply your new identity — keeping the look consistent across every vehicle and location so your brand stays sharp.",
+  },
+];

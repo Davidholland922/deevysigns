@@ -42,7 +42,7 @@ function Card({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={project.image}
-          alt={`${project.title} — ${project.client}`}
+          alt={`${project.client} ${project.category.toLowerCase()} by Deevy Signs — ${project.industry}, Ireland`}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105"
         />
@@ -115,7 +115,7 @@ function ProjectModal({
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={project.gallery[0]}
-            alt={project.title}
+            alt={`${project.client} — ${project.category} project by Deevy Signs, ${project.industry}`}
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 to-transparent" />
@@ -178,7 +178,7 @@ function ProjectModal({
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={src}
-                    alt={`${project.title} detail ${i + 1}`}
+                    alt={`${project.client} ${project.category.toLowerCase()} by Deevy Signs, Portlaoise — detail ${i + 1}`}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                   />

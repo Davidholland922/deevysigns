@@ -12,3 +12,6 @@ next-env.d.ts
 
 # Claude Code local-only settings (machine-specific permissions)
 .claude/settings.local.json
+
+# Local build artifact for manual upload
+deevysigns-site.zip
