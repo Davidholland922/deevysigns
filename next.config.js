@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static HTML export — outputs a plain `out/` folder that any host
-  // (Hostinger shared hosting, etc.) can serve. No Node.js server required.
-  output: "export",
+  // Deployed on Hostinger's GitHub-connected Next.js hosting, which runs the
+  // app as a Node server (`next build` + `next start`). Do NOT use
+  // `output: "export"` here — `next start` cannot run a static export, which
+  // leaves the server serving a stale build with mismatched asset hashes.
   reactStrictMode: true,
-  trailingSlash: true,
   images: {
-    // The Next.js image optimizer needs a server, so disable it for static export.
+    // Keep image optimization off so images serve directly without needing
+    // `sharp` on the Hostinger Node runtime.
     unoptimized: true,
   },
 };
