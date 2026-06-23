@@ -133,6 +133,29 @@ export function Hero() {
               businesses across Ireland
             </span>
           </motion.div>
+
+          {/* Mobile / tablet image grid — the desktop side montage is hidden
+              below lg, so show the work photos here instead. */}
+          <div className="mt-10 grid grid-cols-2 gap-3 lg:hidden">
+            {MONTAGE.map((item, i) => (
+              <motion.div
+                key={item.src}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, ease, delay: 0.6 + i * 0.1 }}
+                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 shadow-xl"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  loading="eager"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-crimson-900/40 via-transparent to-transparent" />
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Montage */}
